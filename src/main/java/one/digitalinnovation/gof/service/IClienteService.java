@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
  * @author falvojr
  */
 @Repository
-public interface ClienteService {
+public interface IClienteService {
 
 	Iterable<Cliente> buscarTodos();
 

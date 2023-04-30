@@ -1,10 +1,10 @@
 package one.digitalinnovation.gof.service.impl;
 
 import one.digitalinnovation.gof.model.Cliente;
-import one.digitalinnovation.gof.model.ClienteRepository;
+import one.digitalinnovation.gof.repository.ClienteRepository;
 import one.digitalinnovation.gof.model.Endereco;
-import one.digitalinnovation.gof.model.EnderecoRepository;
-import one.digitalinnovation.gof.service.ClienteService;
+import one.digitalinnovation.gof.repository.EnderecoRepository;
+import one.digitalinnovation.gof.service.IClienteService;
 import one.digitalinnovation.gof.service.ViaCepService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,14 +12,14 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 
 /**
- * Implementação da <b>Strategy</b> {@link ClienteService}, a qual pode ser
+ * Implementação da <b>Strategy</b> {@link IClienteService}, a qual pode ser
  * injetada pelo Spring (via {@link Autowired}). Com isso, como essa classe é um
  * {@link Service}, ela será tratada como um <b>Singleton</b>.
  *
  * @author falvojr
  */
 @Service
-public class ClienteServiceImpl implements ClienteService {
+public class ClienteServiceImpl implements IClienteService {
 
 	// Singleton: Injetar os componentes do Spring com @Autowired.
 	@Autowired
